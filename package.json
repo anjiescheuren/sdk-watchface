@@ -22,6 +22,7 @@
       "dummy"
     ],
     "resources": {
+
       "media": [
         {
           "type":"font",
@@ -30,12 +31,12 @@
           "compatibility": "2.7"
         },
         {
-          "type": "bitmap",
-          "name": "IMAGE_BACKGROUND",
-          "file": "background.png"
+          "type":"bitmap",
+          "name":"IMAGE_BACKGROUND",
+          "file":"background.png"
         }
       ]
-
     }
   }
 }
+
