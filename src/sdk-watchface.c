@@ -1,6 +1,10 @@
 #include <pebble.h>
 static Window *s_main_window;
 static TextLayer *s_time_layer;
+
+static BitmapLayer *s_background_layer;
+static GBitmap *s_background_bitmap;
+
 static GFont s_time_font;
 
 static void update_time() {
@@ -46,6 +50,17 @@ static void main_window_load(Window *window) {
   // Apply to TextLayer
   text_layer_set_font(s_time_layer, s_time_font);
 
+  // Create GBitmap
+  s_background_bitmap = gbitmap_create_with_resource(RESOURCE_ID_IMAGE_BACKGROUND);
+
+
+  // Create BitmapLayer to display the GBitmap
+  s_background_layer = bitmaplayer_create(bounds);
+
+  // Set the bitmap onto the layer and add to the window
+  bitmap_layer_set_bitmap(s_background_layer, s_background_bitmap);
+  layer_add_child(window_layer, bitmap_layer_get_layer(s_background_layer));
+
 }
 
 static void main_window_unload(Window *window) {
@@ -54,6 +69,12 @@ static void main_window_unload(Window *window) {
 
   // Unload GFont
   font_unload_custom_font(s_time_font);
+
+  // Destroy GBitmap
+  gbitmap_destroy(s_background_bitmap);
+
+  // Destroy BitmapLayer
+  bitmap_layer_destroy(s_background_layer);
 
 }
 
@@ -76,6 +97,7 @@ static void init() {
   // Register with TickTimerService
   tick_timer_service_subscribe(MINUTE_UNIT, tick_handler);
 
+  window_set_background_color(s_main_window, GColorBlack);
 }
 
 static void deinit() {
