@@ -45,6 +45,7 @@ static void main_window_load(Window *window) {
 
   // Apply to TextLayer
   text_layer_set_font(s_time_layer, s_time_font);
+
 }
 
 static void main_window_unload(Window *window) {
