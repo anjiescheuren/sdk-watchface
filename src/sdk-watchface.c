@@ -1,6 +1,7 @@
 #include <pebble.h>
 static Window *s_main_window;
 static TextLayer *s_time_layer;
+static GFont s_time_font;
 
 static void update_time() {
   // Get a tm structure
@@ -38,11 +39,20 @@ static void main_window_load(Window *window) {
 
   // Add it as a child layer to the Window's root layer
   layer_add_child(window_layer, text_layer_get_layer(s_time_layer));
+
+  // Create GFont
+  s_time_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_PERFECT_DOS_48));
+
+  // Apply to TextLayer
+  text_layer_set_font(s_time_layer, s_time_font);
 }
 
 static void main_window_unload(Window *window) {
   // Destroy TextLayer
   text_layer_destroy(s_time_layer);
+
+  // Unload GFont
+  font_unload_custom_font(s_time_font);
 
 }
 
