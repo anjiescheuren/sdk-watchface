@@ -19,7 +19,12 @@
       "watchface": true
     },
     "messageKeys": [
-      "dummy"
+      "dummy",
+      "TEMPERATURE",
+      "CONDITIONS"
+    ],
+    "capabilities": [
+      "location"
     ],
     "resources": {
 
