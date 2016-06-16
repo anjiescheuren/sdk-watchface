@@ -18,7 +18,7 @@
     "watchapp": {
       "watchface": true
     },
-    "appKeys": {
+    "messageKeys": {
       "KEY_TEMPERATURE": 0,
       "KEY_CONDITIONS": 1
     },
