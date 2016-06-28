@@ -28,18 +28,18 @@
     "resources": {
 
       "media": [
-        // {
-        //   "type":"font",
-        //    "name":"FONT_OSP_DIN_44",
-        //   "file":"OSP-DIN_44.ttf",
-        //   "compatibility": "2.7"
-        // },
-        // {
-        //   "type":"font",
-        //   "name":"FONT_OSP_DIN_44",
-        //   "file":"OSP-DIN_44.ttf",
-        //   "compatibility": "2.7"
-        // },
+        {
+          "type":"font",
+          "name":"FONT_PERFECT_DOS_48",
+          "file":"perfect-dos-vga.ttf",
+          "compatibility": "2.7"
+        },
+        {
+          "type":"font",
+          "name":"FONT_PERFECT_DOS_20",
+          "file":"perfect-dos-vga.ttf",
+          "compatibility": "2.7"
+        },
         {
           "type":"bitmap",
           "name":"IMAGE_BACKGROUND",
