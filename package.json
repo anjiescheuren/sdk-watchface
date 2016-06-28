@@ -36,8 +36,8 @@
         },
         {
           "type":"font",
-          "name":"FONT_PERFECT_DOS_20",
-          "file":"perfect-dos-vga.ttf",
+          "name":"FONT_OSP_DIN_44",
+          "file":"OSP-DIN_44.ttf",
           "compatibility": "2.7"
         },
         {
