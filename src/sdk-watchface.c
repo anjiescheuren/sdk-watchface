@@ -122,7 +122,7 @@ static void main_window_load(Window *window) {
   text_layer_set_text(s_weather_layer, "Loading...");
 
   // Create second custom font, apply it and add to Window
-  s_weather_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_PERFECT_DOS_20));
+  s_weather_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_OSP_DIN_20));
   text_layer_set_font(s_weather_layer, s_weather_font);
   layer_add_child(window_get_root_layer(window), text_layer_get_layer(s_weather_layer));
 }
