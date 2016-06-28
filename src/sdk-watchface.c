@@ -103,7 +103,7 @@ static void main_window_load(Window *window) {
   text_layer_set_text_alignment(s_time_layer, GTextAlignmentCenter);
 
   // Create GFont
-  s_time_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_OSP_DIN_44));
+  s_time_font = fonts_get_system_font(FONT_KEY_BITHAM_44_BOLD);
 
   // Apply to TextLayer
   text_layer_set_font(s_time_layer, s_time_font);
@@ -122,7 +122,7 @@ static void main_window_load(Window *window) {
   text_layer_set_text(s_weather_layer, "Loading...");
 
   // Create second custom font, apply it and add to Window
-  s_weather_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_OSP_DIN_20));
+  s_weather_font = fonts_get_system_font(FONT_KEY_BITHAM_20_MEDIUM_NUMBERS);
   text_layer_set_font(s_weather_layer, s_weather_font);
   layer_add_child(window_get_root_layer(window), text_layer_get_layer(s_weather_layer));
 }
